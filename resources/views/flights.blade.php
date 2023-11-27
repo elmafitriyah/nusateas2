@@ -12,6 +12,12 @@
     .container-fluid a{
         color: white;
     }
+    #nav{
+        background: #113946;
+    }
+    .navbar-brand{
+        margin-left: 3%;
+    }
     #nav-link{
         font-family: 'inter'; font-weight: 700;
     }
@@ -27,8 +33,9 @@
         margin-top: 3%;
         border-radius: 11px;
         background: #738575;
-        height: 380px;
+        height: auto;
         flex-shrink: 0;
+        padding-bottom: 4%;
     }#fl2{
         padding-top: 2%;
         padding-bottom: 3%;
@@ -57,27 +64,42 @@
         line-height: normal;
         padding: 30% 0% 0% 51%;
     }
+    .card-title:hover{
+        transform: scale(1.15);
+    }
+    .card-title{
+        transition: all 0.3s;
+    }
+    .col-md-4 a{
+        text-decoration: none;
+    }
+    .card a{
+        text-decoration: none;
+        color: #001524;
+    }
     </style>
 </head>
 <body>
     <section id="nav">
-        <nav class="navbar" style="background-color: #113946;">
+        <nav class="navbar">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#" style="font-family: 'inter'; font-weight: 800;">NUSATEAS</a>
-              <ul class="nav justify-content-center">
+              <a class="navbar-brand" href="/" style="font-weight: 700;">
+                <img src="{{ asset('images/logo.svg') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                NUSATEAS 
+              </a>
+              <ul class="nav justify-content-center" style="margin-right:35%;">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Flights</a>
+                  <a class="nav-link active" aria-current="page" href="#" style="color:#D6CC99;">Flights</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">My Book</a>
+                  <a class="nav-link" href="/order">My Book</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+              </ul>
+            </div>
+        </nav>
     </section>
 
     <section id="fl1">
@@ -125,7 +147,7 @@
                             </select>
                         </div>
                         <div class="col-md-4" style="padding-top: 3%">
-                            <input type="submit" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" style="border-radius: 30px; background: #D6CC99; width: 130px; height: 40px; flex-shrink: 0;" value="Cari">                        
+                            <a href="/ticket"><input type="submit" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" style="border-radius: 30px; background: #D6CC99; width: 130px; height: 40px; flex-shrink: 0;" value="Cari"></a>                     
                         </div>
                     </div>
                 </div>
@@ -145,25 +167,28 @@
                     <div class="card">
                       <img src="{{ asset('images/jkt.png') }}" class="card-img-top" alt="jakartaa">
                       <div class="card-body">
-                        <h5 class="card-title text-center">Jakarta</h5>
+                        <a href="/ticket"><h5 class="card-title text-center">Jakarta</h5></a>
                       </div>
                     </div>
                     <div class="card">
                       <img src="{{ asset('images/sby.png') }}" class="card-img-top" alt="surabaya">
                       <div class="card-body">
-                        <h5 class="card-title text-center">Surabaya</h5>
+                        <a href="/ticket">
+                        <h5 class="card-title text-center">Surabaya</h5></a>
                       </div>
                     </div>
                     <div class="card">
                       <img src="{{ asset('images/bali.png') }}" class="card-img-top" alt="bali">
                       <div class="card-body">
-                        <h5 class="card-title text-center">Bali</h5>
+                        <a href="/ticket">
+                        <h5 class="card-title text-center">Bali</h5></a>
                       </div>
                     </div>
                     <div class="card">
                         <img src="{{ asset('images/bkl.png') }}" class="card-img-top" alt="bengkulu">
                         <div class="card-body">
-                          <h5 class="card-title text-center">Bengkulu</h5>
+                            <a href="/ticket">
+                          <h5 class="card-title text-center">Bengkulu</h5></a>
                         </div>
                       </div>
                   </div>
@@ -176,7 +201,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h4>Mulai dari Rp- <br> dengan diskon yang melimpah</h4>
-                    <h5 style="color: white; font-size:13px; font-family:inter; padding-top:4%">Contact Person : +62 2208042023</h5>
+                    {{-- <h5 style="color: white; font-size:13px; font-family:inter; padding-top:4%">Contact Person : +62 2208042023</h5> --}}
                 </div>
                 <div class="col-md-6"><h6>*Syarat & Ketentuan berlaku</h6></div>
             </div>

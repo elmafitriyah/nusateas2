@@ -55,7 +55,8 @@
         <div class="container" style="padding-left: 17%">
             <div class="row" style="padding:4% 0% 4% 0%;">
                 <div class="col-md-12">
-                    <img src="{{ asset('images/1.svg')}}" alt="tiket" style="width: 80%;">
+                    <a href="/confirm">
+                    <img src="{{ asset('images/4.svg')}}" alt="tiket" style="width: 80%;"></a>
                 </div>
             </div>
                 <div class="row" style="padding:2% 0% 2% 0%;">
@@ -70,7 +71,7 @@
                 </div>
                 <div class="row" style="padding:4% 0% 4% 0%;">
                     <div class="col-md-12">
-                        <img src="{{ asset('images/4.svg') }}" alt="tiket" style="width: 80%;">
+                        <img src="{{ asset('images/1.svg') }}" alt="tiket" style="width: 80%;">
                     </div>
                 </div>
             </div>

@@ -39,3 +39,21 @@ Route::get('/ticket',function() {
 Route::get('/confirm',function() {
     return view('confirm');
 });
+Route::get('/data',function() {
+    return view('data');
+});
+Route::get('/promo',function() {
+    return view('promo');
+});
+Route::get('/chair',function() {
+    return view('chair');
+});
+Route::get('/berhasil',function(){
+    return view('berhasil');
+});
+route::get('/order',function(){
+    return view('/order');
+});
+Route::get('/rilticket',function(){
+    return view('rilticket');
+});

@@ -14,10 +14,19 @@
         color: white;
     }
     #nav-link{
-        font-family: 'inter'; font-weight: 700;
+        font-family: 'inter'; font-weight: 400;
+    }
+    .navbar-brand{
+        margin-left: 3%;
     }
     .card-body{
         background-color: #EAD7BB;
+    }
+    #hom1 a{
+        text-decoration: none;
+    }
+    #hom1 button{
+        width: 45%;
     }
     #hom2{
         padding-top: 2%;
@@ -77,31 +86,41 @@
         font-weight: 400;
         line-height: normal;
     }
+    #footer a{
+        text-decoration: none;
+    }
+    .card:hover{
+        transform: scale(1.15);
+    }
+    .card{
+        transition: all 0.3s;
+    }
+    
     </style>
 </head>
 <body>
     <section id="nav">
         <nav class="navbar" style="background-color: #113946;">
             <div class="container-fluid justify-content-between">
-              <a class="navbar-brand" href="#" style="font-family: 'inter'; font-weight: 800;">NUSATEAS</a>
+              <a class="navbar-brand" href="#" style="font-family: 'inter'; font-weight: 800;" style="width: 11%"><img src="{{ asset('images/logo.svg') }}" alt="logo" style="width: 12%;">  NUSATEAS</a>
               <ul class="nav">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Flights</a>
+                  <a class="nav-link" href="#hom2">Flights</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a class="nav-link" href="#">My Book</a>
-                </li>
+                </li> --}}
               <li class="nav-item">
-                <a class="nav-link" href="#">Feature</a>
+                <a class="nav-link" href="#hom3">Feature</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#hom4">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#footer">Contact</a>
               </li>
             </ul>
             <ul>
@@ -120,19 +139,19 @@
     </section>
 
     <section id="hom1">
-        <div class="container-fluid" style="background-image: url( {{ asset('images/bg.svg') }});">
+        <div class="container-fluid" style="background-image: url( {{ asset('images/buset.svg') }});">
             <div class="row" style="font-family: Inter">
                 <div class="col-sm-6"></div>
                 <div class="col-sm-6 flex items-center" style="background-image: url( {{ asset('images/ktk.svg') }}); padding-top:7%; padding-bottom:7%">
                     <div class="row" style="font-weight: 800; font-size:35px; color :white; margin-top: 8%; margin-left:10%;">NUSATEAS</div>
-                    <div class="row" style="font-weight:700; font-size:25px; color:black; margin-top: 5%; margin-left:10%;">Layanan Penerbangan Untuk Wilayah Nusantara</div>
+                    <div class="row" style="font-weight:700; font-size:25px; color:black; margin-top: 5%; margin-left:10%; width: 60%;">Layanan Penerbangan Untuk Wilayah Nusantara</div>
                     <div class="row text-center" style="font-weight:300; color:white; margin-top: 5%; margin-left:30%;">Let's Join With Us!</div>
                     <div class="row text-center" style="margin-top: 5%;">
                         <div class="col-sm-6">
-                            <button type="button" class="btn btn-dark">Sign Up</button>
+                            <button type="button" class="btn btn-dark"><a href="/signup">Sign Up</a></button>
                         </div>
                         <div class="col-sm-6">
-                            <button type="button" class="btn btn-outline-dark">LogIn</button>
+                            <button type="button" class="btn btn-outline-dark"><a href="/login">LogIn</a></button>
                         </div>
                     </div>
                 </div>
@@ -186,13 +205,19 @@
                 </h2>
             <div class="row">
                 <div class="col-md-4">
+                    <div class="card">
                     <img src="{{ asset('images/dis1.svg') }}" alt="diskonnnnn" style="width: 90%">
+                    </div>
                 </div>
                 <div class="col-md-4">
+                    <div class="card">
                     <img src="{{ asset('images/dis2.svg') }}" alt="diskon jugaa" style="width: 90%">
+                    </div>
                 </div>
                 <div class="col-md-4">
+                    <div class="card">
                     <img src="{{ asset('images/dis3.svg') }}" alt="diskon lagii" style="width: 90%">
+                    </div>
                 </div>
             </div>
             </div>
@@ -259,26 +284,27 @@
                           </svg>
                         NUSATEAS.OFFICIAL</h3></a>
                     </div>
-                    <div class="row"><h3><svg xmlns="http://www.w3.org/2000/svg" width="41" height="24" viewBox="0 0 61 44" fill="none">
+                    <div class="row">
+                        <a href="https://open.spotify.com/track/7FlHNJT4TC120CDvFOHzei?si=3467ab0a70a24996"><h3><svg xmlns="http://www.w3.org/2000/svg" width="41" height="24" viewBox="0 0 61 44" fill="none">
                         <path d="M36.0073 22.3123L26.3802 27.7523V16.8723L36.0073 22.3123Z" fill="black" stroke="white" stroke-width="4.12591" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M3 24.2366V20.3876C3 12.5122 3 8.5746 5.49065 6.04101C7.98133 3.50742 11.9025 3.39774 19.7449 3.1784C23.461 3.07447 27.2571 3 30.5061 3C33.7551 3 37.5512 3.07447 41.2673 3.1784C49.1096 3.39774 53.0308 3.50742 55.5215 6.04101C58.0122 8.5746 58.0122 12.5122 58.0122 20.3876V24.2366C58.0122 32.1118 58.0122 36.0496 55.5215 38.583C53.0308 41.1167 49.1098 41.2263 41.2676 41.4458C37.5512 41.5497 33.7551 41.6242 30.5061 41.6242C27.2571 41.6242 23.4609 41.5497 19.7446 41.4458C11.9024 41.2263 7.98127 41.1167 5.49062 38.583C3 36.0496 3 32.1118 3 24.2366Z" stroke="white" stroke-width="4.12591"/>
                       </svg>
-                      <a href="https://open.spotify.com/track/3vZk7OAUjMtVDNC852aNqi?si=1de9a42843e945b9"></a>NUSATEAS OFFICIAL</h3>
+                      NUSATEAS OFFICIAL</h3></a>
                     </div>
                 </div>
                 <div class="col-md-6" style="padding-top: 4%;">
                     <ul class="nav">
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                          <a class="nav-link active" aria-current="page" href="#nav">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Flights</a>
+                          <a class="nav-link" href="#hom2">Flights</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Feature</a>
+                          <a class="nav-link" href="#hom3">Feature</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#hom4">About</a>
                         </li>
                     </ul> 
                 </div>
